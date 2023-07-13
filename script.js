@@ -68,7 +68,7 @@ $(document).ready(() => {
   for (let i = 0; i < productList.length; i++) {
     let productCard = `
     
-        <div id="card" class="md:w-5/12 md:m-3 flex flex-col justify-center py-12 shadow-xl w-11/12 mx-auto my-4 hover:scale-105">
+        <div id="card" class="md:w-5/12 md:m-3 flex flex-col justify-center py-12 shadow-xl w-11/12 mx-auto my-4 md:hover:scale-105 filter-none">
           <a href="/ProductDetailsPage/productDetails.html?id=${i}">
             <div class="text-center leading-8">
                 <p class="text-sm text-slate-500">${productList[i].category}</p>

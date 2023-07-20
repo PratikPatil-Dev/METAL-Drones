@@ -4,6 +4,8 @@ $(document).ready(() => {
     $("#menu").toggleClass("hidden");
   });
 
+  $("#cnt").text(localStorage.getItem("cnt"));
+
   // Own Carousel
   $(".sampleSlick").slick({
     dots: false,
@@ -18,6 +20,7 @@ $(document).ready(() => {
 
   const products = [
     {
+      id: 0,
       category: "Sports Drone ",
       name: "DJI FPV",
       img: "https://dji-official-fe.djicdn.com/dps/375b692174c489b8b11077a16a6f79f6.png",
@@ -31,6 +34,7 @@ $(document).ready(() => {
       price: 735,
     },
     {
+      id: 1,
       category: "Camera Drone",
       name: "MAVIC 3 CINE",
       img: "https://stormsend1.djicdn.com/tpc/uploads/spu/cover/5e41e7a3caed3fe35ada2822224f94a8@retina_small.png",
@@ -42,6 +46,7 @@ $(document).ready(() => {
       price: 1599,
     },
     {
+      id: 2,
       category: "Camera Drone",
       name: "MAVIC 3 PRO",
       img: "https://dji-official-fe.djicdn.com/dps/44a74567e9b7c6452b021400176143a5.png",
@@ -72,12 +77,20 @@ $(document).ready(() => {
           <a href="/ProductDetailsPage/productDetails.html?id=${i}">
             <div class="text-center leading-8">
                 <p class="text-sm text-slate-500">${productList[i].category}</p>
-                <h1 class="text-4xl font-bold tracking-wider">${productList[i].name}</h1>
-                <h3 class="font-semibold tracking-wide">${productList[i].tagline}</h3>
-                <p class="mt-5 text-slate-700">Price:$ ${productList[i].price}</p>
+                <h1 class="text-4xl font-bold tracking-wider">${
+                  productList[i].name
+                }</h1>
+                <h3 class="font-semibold tracking-wide">${
+                  productList[i].tagline
+                }</h3>
+                <p class="mt-5 text-slate-700">Price: $${productList[
+                  i
+                ].price.toLocaleString()}</p>
             </div>
             <div>
-                <img class="w-96 h-60 m-auto" src="${productList[i].img}" alt="${productList[i].name}">
+                <img class="w-96 h-60 m-auto" src="${
+                  productList[i].img
+                }" alt="${productList[i].name}">
             </div>
           </a>
         </div>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>METAL</title>
+    <link rel="stylesheet" href="/CheckoutPage/checkout.css" />
+    <script
+      src="https://kit.fontawesome.com/744ebb3139.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav
+      class="text-white fixed top-0 left-0 z-20 flex flex-wrap justify-between items-center w-full py-6 md:py-0 px-0 text-lg bg-black"
+    >
+      <div
+        class="absolute top-0 md:static w-full md:flex md:items-center md:w-auto"
+      >
+        <ul
+          class="text-base text-white pt-4 md:flex md:justify-between md:pt-0 space-x-4"
+        >
+          <li class="md:p-4 hover:text-gray-400 font-bold cursor-pointer">
+            <a href="/index.html">
+              <img
+                class="m-auto scale-75 md:scale-100"
+                src="/images/METAL1.png"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="menu" class="hidden w-full md:flex md:items-center md:w-auto">
+        <ul
+          class="text-base text-white pt-4 pl-16 md:pr-20 md:pl-0 md:flex md:justify-between md:pt-0 space-x-4"
+        >
+          <li>
+            <a class="md:p-4 py-2 block hover:text-gray-400" href="#category"
+              >Categories</a
+            >
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-gray-400" href="#"
+              >What's New</a
+            >
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-gray-400" href="#"
+              >Support</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="menu" class="w-full md:flex md:items-center md:w-auto left-nav">
+        <ul
+          class="text-base text-white pt-4 flex md:justify-between md:pt-0 space-x-4 absolute top-0 right-0"
+        >
+          <li class="md:p-4 block">
+            <span class="material-symbols-outlined">search</span>
+          </li>
+          <li class="md:p-4 px-2 block">
+            <span class="material-symbols-outlined cursor-pointer relative"
+              >shopping_cart
+              <span
+                id="cnt"
+                class="absolute -right-1 md:-right-3 -top-4 text-xs md:text-sm"
+                >0</span
+              ></span
+            >
+          </li>
+        </ul>
+      </div>
+      <div
+        id="menu-button"
+        class="h-6 w-6 cursor-pointer md:hidden block absolute top-0 left-0 px-8 pt-4"
+      >
+        <span class="material-symbols-outlined text-2xl md:text-lg">menu</span>
+      </div>
+    </nav>
+    <!-- ckeckout section  -->
+    <section class="checkout-section pt-8 md:pt-8">
+      <div class="container mx-auto md:flex justify-between">
+        <!-- left section  -->
+        <div id="item-container" class="w-full md:w-8/12 mt-6 md:p-8">
+          <h2 class="text-2xl font-bold mb-4 md:mb-14 ml-2">Your Cart</h2>
+          <div id="itemCards" class="space-y-4"></div>
+          <div class="my-4 text-center md:text-start">
+            <a
+              class="border-b-2 pb-1 md:hover:border-gray-800"
+              href="/index.html#product-section"
+              >Continue Shopping</a
+            >
+          </div>
+          <div class="flex justify-between text-center">
+            <div
+              class="feature w-60 h-40 flex justify-center items-center flex-col md:shadow-xl"
+            >
+              <i class="fa-solid fa-0 fa-2xl mb-10" style="color: #000000"></i>
+              <h3>0% Installment Plans</h3>
+            </div>
+            <div
+              class="feature w-60 h-40 flex justify-center items-center flex-col md:shadow-xl"
+            >
+              <i
+                class="fa-solid fa-truck fa-2xl mb-10"
+                style="color: #000000"
+              ></i>
+              <h3>Free Delivery</h3>
+            </div>
+            <div
+              class="feature w-60 h-40 flex justify-center items-center flex-col md:shadow-xl"
+            >
+              <i
+                class="fa-solid fa-shield fa-2xl mb-10"
+                style="color: #000000"
+              ></i>
+              <h3>DJI Official Warrenty</h3>
+            </div>
+          </div>
+          <!-- items are dynamicallyy added here -->
+        </div>
+        <!-- right section  -->
+        <div
+          class="h-auto md:min-h-screen w-full md:w-4/12 mt-6 p-4 md:p-8 right"
+        >
+          <div id="right-content">
+            <h1 class="font-bold text-2xl md:mb-14">Summary</h1>
+            <h3 class="flex my-4">
+              <span class="material-symbols-outlined mr-1">
+                local_shipping
+              </span>
+              Free standard shipping acroos pan India
+            </h3>
+            <div id="payWith" class="my-6 pl-4 border-l-4">
+              <h1>Pay with:</h1>
+              <h3 class="flex">
+                <span class="material-symbols-outlined"> check_small </span>
+                Credit card / Debit card
+              </h3>
+              <h3 class="flex">
+                <span class="material-symbols-outlined"> check_small </span>
+                Net banking
+              </h3>
+              <h3 class="flex">
+                <span class="material-symbols-outlined"> check_small </span>
+                UPI (payTm, Gpay, PhonePay)
+              </h3>
+            </div>
+            <div id="finalAmount">
+              <!-- <div class="flex justify-between">
+                <span>GST(18% included)</span><span>$22</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-bold">Total</span
+                ><span class="font-bold">$400</span>
+              </div> -->
+            </div>
+            <button
+              class="rounded-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold my-8 py-2 px-6 w-full tracking-wider"
+              onclick="redirect()"
+            >
+              CHECKOUT
+            </button>
+            <p class="text-sm">
+              Please note that DJI have partnered with METAL to sell the orignal
+              DJI products. METAL is one of the offical retail stores of genuine
+              DJI products. Although we are fully responsible for your online
+              buying experience, the warrenty is still provided by DJI only.
+              Contact support in case you face any issues regarding payment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer  -->
+    <footer class="bg-[#141414] text-white w-full h-48 flex items-baseline">
+      <div class="w-10/12 bg-green m-auto">
+        <div class="flex justify-between">
+          <div class="flex">
+            <div><img class="w-7/12" src="/images/METAL1.png" alt="" /></div>
+          </div>
+          <div class="">
+            <a class="px-1" href="https://github.com/foxyfoxxx"
+              ><i class="fa-brands fa-github" style="color: #919699"></i></a
+            ><a class="px-1" href="https://www.linkedin.com/in/pratik-patil-av/"
+              ><i class="fa-brands fa-linkedin" style="color: #919699"></i></a
+            ><a class="px-1" href="https://twitter.com/CryptoWriter10?s=09"
+              ><i class="fa-brands fa-twitter" style="color: #919699"></i></a
+            ><a
+              class="px-1"
+              href="https://instagram.com/__.pratikpatil.__?igshid=MzNlNGNkZWQ4Mg=="
+              ><i class="fa-brands fa-instagram" style="color: #919699"></i
+            ></a>
+          </div>
+        </div>
+        <hr />
+        <div class="md:flex justify-between">
+          <div class="text-[#919699] md:text-sm text-xs p-2 md:p-0">
+            Copyright © 2023 METAL All Rights Reserved.
+          </div>
+          <div class="flex">
+            <li class="text-[#919699] md:text-sm text-xs px-2 hover:text-white">
+              Terms of Use
+            </li>
+            <li class="text-[#919699] md:text-sm text-xs px-2 hover:text-white">
+              Contact Us
+            </li>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-[#919699] md:text-sm text-xs pt-4">
+            Designed and developed by Pratik Patil.
+          </h3>
+        </div>
+      </div>
+    </footer>
+    <!-- Script tags  -->
+    <script src="/CheckoutPage/checkout.js"></script>
+  </body>
+</html>

@@ -1,10 +1,26 @@
-.right{
-    background-color: rgb(235, 233, 233);
+.right {
+  background-color: rgb(235, 233, 233);
 }
-#payWith{
-    border-color: #cccccc;
+#payWith {
+  border-color: #cccccc;
 }
 
-.feature{
-    background-color: rgb(235, 233, 233);
+.feature {
+  background-color: rgb(235, 233, 233);
+}
+
+.vanish-animation {
+  animation: vanish 0.8s forwards;
+}
+
+@keyframes vanish {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-4rem);
+    opacity: 0;
+  }
 }

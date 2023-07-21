@@ -6,7 +6,11 @@ function removeItem(i, productName) {
   if (action) {
     localStorage.removeItem(`${i}`);
     // storedItems = storedItems.filter((item) => item.name !== productName);
-    location.reload();
+    const cartCard = $(`.cartCard-${i}`);
+    cartCard.addClass("vanish-animation");
+    setTimeout(() => {
+      location.reload();
+    }, 900);
   }
 }
 
@@ -31,7 +35,9 @@ $(document).ready(() => {
 
   for (let i = 0; i < storedItems.length; i++) {
     let cartItem = `
-    <div class="flex justify-between items-center w-full">
+    <div class="cartCard-${
+      storedItems[i].id
+    } flex justify-between items-center w-full">
         <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between w-full">
             <div class="flex items-center space-x-4">
               <div class="w-16 h-16 bg-gray-200 rounded-lg">
@@ -61,9 +67,11 @@ $(document).ready(() => {
                   ].totalPrice.toLocaleString()}</p>`
             }
         </div>
-       <button onclick="removeItem(${storedItems[i].id}, '${
+       <button id="removeBtn-${storedItems[i].id}" onclick="removeItem(${
+      storedItems[i].id
+    }, '${
       storedItems[i].name
-    }')" class="px-4 py-2 mx-4 bg-red-500 text-white font-bold rounded md:h-10 hover:bg-white hover:text-red-500 hover:shadow-md">
+    }')" class="px-4 py-2 mx-4 hover:bg-red-500 hover:text-white font-bold rounded md:h-10 bg-white text-red-500 hover:shadow-md duration-300">
   Remove
 </button>
         
